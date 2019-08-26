@@ -32,7 +32,7 @@
             <div id="progstat"></div>
             <div id="progress"></div>
         </div>
-        <div id="nooverlay" class="fade">
+        <div id="nooverlay" class="animated slideInRight">
             
             <div class="contact-section">
                 <div class="container contact">
@@ -323,20 +323,36 @@
                 </div>
             </div>
         </div>
+        <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v4.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="1536116643107550"
+  theme_color="#fa3c4c">
+      </div>
         <script src="js/header.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
         <script src="js/index.js"></script>
         <script src="js/slider.js"></script>
         <script src="js/loading.js"></script>
-        <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-                                                                         </script>
         
     </body>
 </html>
